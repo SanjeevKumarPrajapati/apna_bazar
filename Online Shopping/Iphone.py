@@ -1,0 +1,55 @@
+from tkinter import *
+def iphone():
+    import tkinter
+    from PIL import ImageTk, Image
+    #import QR_Code 
+    b=Tk()
+    b.title("Apple Iphone 11 Pro Max ")
+    b.minsize(460,655)
+    b.maxsize(460,655)
+    def qr():
+        b.minsize(500,600)
+        b.maxsize(500,600)
+        image1 = Image.open('qrcode.jpg')
+        test = ImageTk.PhotoImage(image1)
+        label1 = tkinter.Label(image=test)
+        label1.image = test
+        label1.pack()
+        b.mainloop()
+    def details():
+        print("==========================================================================")
+        print("\nApple iPhone 11 Pro Max, 512GB, Space Gray - Unlocked (Renewed Premium)")
+        print("Rear Cameras 4000mAh Battery Mobile Phone 4G Dual SIM Face ID&Fingerprint Blue\n")
+        print("Price : $926.14")
+        print("\nModel Name : IPhone 11 Pro Max")
+        print("Wireless Carrier : Unlocked")
+        print("Brand : Apple")
+        print("Form Factor : Smartphone")
+        print("Memory Storage Capacity : 512 GB")
+        print("Cellular Technology : 5G, 4G, 3G, 2G")
+        print("Operating System : IOS 12")
+        print("Color : Space Gray")
+        print("SIM card slot count : Dual SIM")
+        print("Display Size  : LED")
+        print("\nAbout this item\n")
+        print("1.) This phone is unlocked and compatible with any carrier of choice on GSM and CDMA networks (e.g. AT&T, T-Mobile, Sprint, Verizon,")
+        print("US Cellular, Cricket, Metro, Tracfone, Mint Mobile, etc.).")
+        print("2.) Tested for battery health and guaranteed to come with a battery that exceeds 90% of original capacity.")
+        print("3.) Backed by a one-year satisfaction guarantee, with free access to Amazon’s Technical Support team throughout the full year and")
+        print("ability to replace or return the product if it does not work as expected.")
+        print("4.) Includes a brand new, generic charging cable that is certified Mfi (Made for iPhone) and a brand new, generic wall plug that is UL")
+        print("certified for performance and safety. Also includes a SIM tray removal tool but does not come with headphones or a SIM card.")
+        print("5.) Inspected and guaranteed to have minimal cosmetic damage, which is not noticeable when the device is held at arm’s length.")
+        print("Successfully passed a full diagnostic test which ensures like-new functionality and removal of any prior-user personal information.")
+    def buy_now():
+            qr()
+    image1 = Image.open('iphone-11-pro-max-gold-2019.jpg').resize((400,600))
+    test = ImageTk.PhotoImage(image1)
+    label1 = tkinter.Label(image=test)
+    label1.image = test
+    label1.place(x=50,y=5)
+    #lab=Label(a,text="Mobiles",font=("Arial",15,"bold"),fg="white",bg="blue").place(x=70,y=365)
+    btn=Button(b,text="Buy now",bd=5,bg="yellow",font=("Arial",12,"bold"),command=buy_now).place(x=140,y=612)
+    btn=Button(b,text="Details",bd=5,bg="yellow",font=("Arial",12,"bold"),command=details).place(x=280,y=612)
+    b.mainloop()
+iphone()

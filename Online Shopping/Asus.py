@@ -1,0 +1,55 @@
+from tkinter import *
+def asus():
+    import tkinter
+    from PIL import ImageTk, Image
+    #import QR_Code 
+    b=Tk()
+    b.title("Asus Zenfone  7 Pro")
+    b.minsize(520,655)
+    b.maxsize(520,655)
+    def qr():
+        b.minsize(500,600)
+        b.maxsize(500,600)
+        image1 = Image.open('qrcode.jpg')
+        test = ImageTk.PhotoImage(image1)
+        label1 = tkinter.Label(image=test)
+        label1.image = test
+        label1.pack()
+        b.mainloop()
+    def details():
+        print("==========================================================================")
+        print("\nAsus Zenfone 7 Pro (ZS671KS) 5G 256GB 8GB Global Edition - Aurora Black")
+        print("Rear Cameras 4000mAh Battery Mobile Phone 4G Dual SIM Face ID&Fingerprint Blue\n")
+        print("Price : $683.14")
+        print("\nModel Name : Zenfone 7 Pro")
+        print("Wireless Carrier : T Mobiles")
+        print("Brand : Asus")
+        print("Form Factor : Smartphone")
+        print("Memory Storage Capacity : 256 GB")
+        print("Cellular Technology : 5G, 4G, 3G, 2G")
+        print("Operating System : 9.0")
+        print("Color : Black")
+        print("SIM card slot count : Dual SIM")
+        print("Display Size  : 6.67 inches AMOLED")
+        print("\nAbout this item\n")
+        print("1.) Display: 6.67 inches Super AMOLED capacitive touchscreen, 16M colors having resolution of 1080 x 2400 pixels.")
+        print("2.) Support Network Technology: The device supports network including 2G Brands, 3G Brands, 4G Brands and 5G Brands.")
+        print("Powered by 1x3.1 GHz, 3x2.42 | Storage: Available in 256GB + 8GB RAM.")
+        print("3.) Asus Zenfone 7 Pro ZS671KS will come with a 64 + 8 + 12 megapixel dual rear Camera. The Smartphone will have a low")
+        print("camera aperture of f/1.8. It will support high dynamic range(HDR) imaging.")
+        print("4.) The 6.67 inches Super AMOLED capacitive touchscreen is equipped with Octa-core processor Qualcomm SM8250")
+        print("Snapdragon 865+ Processor. An 8GB of RAM will ensure phone runs smoothly even the most memory intensive applications & show no signs of lag.")
+        print("5.) NOTE: International Model - No Warranty in US; Compatible with Most GSM Carriers like T-Mobile, AT&T, MetroPCS, etc. Will NOT")
+        print("work with CDMA Carriers Such as Verizon, Sprint, Boost.")
+    def buy_now():
+            qr()
+    image1 = Image.open('asus.jpg').resize((400,600))
+    test = ImageTk.PhotoImage(image1)
+    label1 = tkinter.Label(image=test)
+    label1.image = test
+    label1.place(x=50,y=5)
+    #lab=Label(a,text="Mobiles",font=("Arial",15,"bold"),fg="white",bg="blue").place(x=70,y=365)
+    btn=Button(b,text="Buy now",bd=5,bg="yellow",font=("Arial",12,"bold"),command=buy_now).place(x=100,y=612)
+    btn=Button(b,text="Details",bd=5,bg="yellow",font=("Arial",12,"bold"),command=details).place(x=300,y=612)
+    b.mainloop()
+asus()
